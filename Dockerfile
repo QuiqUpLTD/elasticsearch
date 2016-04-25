@@ -46,6 +46,8 @@ COPY config ./config
 
 VOLUME /usr/share/elasticsearch/data
 
+RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head
+
 COPY docker-entrypoint.sh /
 
 EXPOSE 9200 9300
